@@ -4,6 +4,7 @@
   "description": "Homeworks of students from the full js course.",
   "main": "index.js",
   "dependencies": {
+    "bootstrap": "^5.3.8",
     "chokidar": "^4.0.3",
     "detect-libc": "^2.1.2",
     "immutable": "^5.1.5",
@@ -15,7 +16,6 @@
     "sass": "^1.98.0",
     "source-map-js": "^1.2.1"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
