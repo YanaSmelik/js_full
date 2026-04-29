@@ -4,6 +4,7 @@
   "description": "Homeworks of students from the full js course.",
   "main": "index.js",
   "dependencies": {
+    "@tailwindcss/cli": "^4.2.4",
     "bootstrap": "^5.3.8",
     "chokidar": "^4.0.3",
     "detect-libc": "^2.1.2",
@@ -14,7 +15,8 @@
     "picomatch": "^4.0.4",
     "readdirp": "^4.1.2",
     "sass": "^1.98.0",
-    "source-map-js": "^1.2.1"
+    "source-map-js": "^1.2.1",
+    "tailwindcss": "^4.2.4"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
