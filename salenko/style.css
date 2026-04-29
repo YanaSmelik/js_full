@@ -1,66 +1,136 @@
-body {
-  font-family: Arial, sans-serif;
-  background: #f5f7fa;
-  color: #333;
+* {
+  box-sizing: border-box;
   margin: 0;
-  padding: 40px;
+  padding: 0;
 }
 
-/* Заголовок */
+body {
+  font-family: 'Inter', Arial, sans-serif;
+  background: #eef2f7;
+  color: #333;
+  padding: 48px 32px;
+  min-height: 100vh;
+}
+
 h1 {
   text-align: center;
-  margin-bottom: 40px;
-  color: #2c3e50;
+  margin-bottom: 48px;
+  color: #1a1f36;
+  font-family: 'Syne', Arial, sans-serif;
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
 }
 
-/* Таблица */
-table {
-  width: 100%;
-  max-width: 900px;
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+  max-width: 1200px;
   margin: 0 auto;
-  border-collapse: collapse;
+}
+
+.card {
   background: #ffffff;
-  border-radius: 12px;
+  border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-/* Ячейки */
-th, td {
-  padding: 15px;
-  text-align: center;
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 32px rgba(79, 91, 213, 0.15);
+  background: #f0f4ff;
 }
 
-/* Заголовки */
-th {
-  background: #eef1f5;
-  color: #2c3e50;
+.card-header {
+  padding: 16px 18px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.card-num {
+  font-size: 12px;
   font-weight: 600;
+  color: #9099b0;
+  letter-spacing: 0.5px;
 }
 
-/* Строки */
-tr {
-  border-bottom: 1px solid #eee;
+.card-title {
+  font-size: 13px;
+  font-weight: 500;
+  color: #1a1f36;
+  line-height: 1.5;
 }
 
-tr:hover {
-  background: #f9fafb;
+.card-preview {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+  background: #f4f6fa;
+  border-top: 1px solid #eef0f4;
+  border-bottom: 1px solid #eef0f4;
 }
 
-/* Кнопки */
+.card-preview iframe {
+  width: 200%;
+  height: 200%;
+  transform: scale(0.5);
+  transform-origin: top left;
+  border: none;
+  pointer-events: none;
+}
+
+.card-preview--placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f0f4ff;
+}
+
+.placeholder-icon {
+  font-size: 32px;
+  color: #c5cde8;
+}
+
+.card-footer {
+  padding: 14px 18px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: auto;
+}
+
 .btn {
   display: inline-block;
-  margin: 3px;
-  padding: 8px 14px;
-  border-radius: 6px;
-  border: 1px solid #d0d7de;
-  color: #2c3e50;
+  padding: 7px 16px;
+  border-radius: 20px;
+  border: 1.5px solid #4f5bd5;
+  color: #4f5bd5;
   text-decoration: none;
-  font-size: 14px;
-  transition: 0.2s;
+  font-size: 12px;
+  font-weight: 500;
+  transition: all 0.2s ease;
 }
 
 .btn:hover {
-  background: #e3e8ee;
+  background: #4f5bd5;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(79, 91, 213, 0.35);
 }
 
+footer {
+  text-align: center;
+  margin-top: 48px;
+  padding: 24px;
+  color: #9099b0;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
