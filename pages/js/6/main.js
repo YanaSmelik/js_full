@@ -18,31 +18,33 @@ console.log("#6. JavaScript homework example file");
 class CalorieCalculator {
   constructor() {
     // code here
+    this.calories = new Map();
   }
 
-  addProduct() {
+  addProduct(productName, calories) {
     // code here
+    this.calories.set(productName, calories);
   }
 
   getProductCalories(productName) {
-    // code here
+    return this.calories.get(productName) || 'Product not found';
   }
 
   removeProduct(productName) {
-    // code here
+      this.calories.delete(productName);
   }
 }
 
 // Демонстрація використання
-// const calorieCalculator = new CalorieCalculator()
-// calorieCalculator.addProduct('Apple', 52)
-// calorieCalculator.addProduct('Banana', 89)
-//
-// console.log(calorieCalculator.getProductCalories('Apple')) // 52
-// console.log(calorieCalculator.getProductCalories('Banana')) // 89
-//
-// calorieCalculator.removeProduct('Apple')
-// console.log(calorieCalculator.getProductCalories('Apple')) // Product not found
+const calorieCalculator = new CalorieCalculator()
+calorieCalculator.addProduct('Apple', 52)
+calorieCalculator.addProduct('Banana', 89)
+
+console.log(calorieCalculator.getProductCalories('Apple')) // 52
+console.log(calorieCalculator.getProductCalories('Banana')) // 89
+
+calorieCalculator.removeProduct('Apple')
+console.log(calorieCalculator.getProductCalories('Apple')) // Product not found
 
 /*
  * #2
