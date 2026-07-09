@@ -1,58 +1,5 @@
 console.log('#14. JavaScript homework example file')
 
-<<<<<<< HEAD
-async function makeGetRequest() {
-  let segment = document.getElementById('get-segment').value
-  let response = await getData(segment)
-  printResponse(response)
-}
-
-async function makePostRequest() {
-  let segment = document.getElementById('post-segment').value
-  let data = document.getElementById('post-data').value
-  data = JSON.parse(data)
-  let response = await postData(segment, data)
-  printResponse(response)
-}
-
-async function makePutRequest() {
-  let id = document.getElementById('put-id').value
-  let data = document.getElementById('put-data').value
-  data = JSON.parse(data)
-  let response = await putData(id, data)
-  printResponse(response)
-}
-
-async function makePatchRequest() {
-  let id = document.getElementById('patch-id').value
-  let data = document.getElementById('patch-data').value
-  data = JSON.parse(data)
-  let response = await patchData(id, data)
-  printResponse(response)
-}
-
-async function makeDeleteRequest() {
-  let id = document.getElementById('delete-id').value
-  let response = await deleteData(id)
-  printResponse(response)
-}
-
-function printResponse(responseText) {
-  let textElement = document.querySelector('#response')
-  let responseMessage = document.createElement('p')
-  responseMessage.id = 'response-text'
-  responseMessage.textContent = JSON.stringify(responseText)
-  textElement.insertAdjacentElement('afterEnd', responseMessage)
-}
-
-function clearResonseText() {
-  let responseText = document.querySelector('#response-text')
-  if (responseText) {
-    responseText.remove()
-  }
-}
-=======
->>>>>>> a097c31 (added homework 31)
 /*
  *
  * #1
@@ -90,20 +37,11 @@ async function getData(segment) {
     if (!response.ok) {
       throw new Error(`Response status: ${response.status}`)
     }
-<<<<<<< HEAD
-    const responseData = await response.json()
-    console.log(responseData)
-    return responseData
-  } catch (error) {
-    console.error(error.message)
-    return error.message
-=======
 
     const responseData = await response.json()
     console.log(responseData)
   } catch (error) {
     console.error(error.message)
->>>>>>> a097c31 (added homework 31)
   }
 }
 
@@ -151,15 +89,8 @@ async function postData(segment, data) {
 
     const responseData = await response.json()
     console.log(responseData)
-<<<<<<< HEAD
-    return responseData
   } catch (error) {
     console.error(error.message)
-    return error.message
-=======
-  } catch (error) {
-    console.error(error.message)
->>>>>>> a097c31 (added homework 31)
   }
 }
 
@@ -205,15 +136,8 @@ async function putData(id, data) {
 
     const responseData = await response.json()
     console.log(responseData)
-<<<<<<< HEAD
-    return responseData
   } catch (error) {
     console.error(error.message)
-    return error.message
-=======
-  } catch (error) {
-    console.error(error.message)
->>>>>>> a097c31 (added homework 31)
   }
 }
 
@@ -259,15 +183,8 @@ async function patchData(id, data) {
 
     const responseData = await response.json()
     console.log(responseData)
-<<<<<<< HEAD
-    return responseData
   } catch (error) {
     console.error(error.message)
-    return error.message
-=======
-  } catch (error) {
-    console.error(error.message)
->>>>>>> a097c31 (added homework 31)
   }
 }
 
@@ -311,15 +228,8 @@ async function deleteData(id) {
       console.log(`Failed to delete post with id ${id}. Status: ${response.status}`)
     }
     console.log(`Post with id ${id} has been successfully deleted.`)
-<<<<<<< HEAD
-    return `Post with id ${id} has been successfully deleted.`
   } catch (error) {
     console.error(`Error during deletion: ${error.message}`)
-    return `Error during deletion: ${error.message}`
-=======
-  } catch (error) {
-    console.error(`Error during deletion: ${error.message}`)
->>>>>>> a097c31 (added homework 31)
   }
 }
 
