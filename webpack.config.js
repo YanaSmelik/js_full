@@ -91,7 +91,7 @@ const setPlugins = () => {
         },
          { 
           from: path.resolve(__dirname, 'src/smelyk'), 
-          to: 'smelyk' 
+          to: 'smelyk'
         },
       ],
     }),
