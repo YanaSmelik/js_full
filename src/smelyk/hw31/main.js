@@ -1,5 +1,6 @@
 console.log('#14. JavaScript homework example file')
 
+<<<<<<< HEAD
 async function makeGetRequest() {
   let segment = document.getElementById('get-segment').value
   let response = await getData(segment)
@@ -50,6 +51,8 @@ function clearResonseText() {
     responseText.remove()
   }
 }
+=======
+>>>>>>> a097c31 (added homework 31)
 /*
  *
  * #1
@@ -87,12 +90,20 @@ async function getData(segment) {
     if (!response.ok) {
       throw new Error(`Response status: ${response.status}`)
     }
+<<<<<<< HEAD
     const responseData = await response.json()
     console.log(responseData)
     return responseData
   } catch (error) {
     console.error(error.message)
     return error.message
+=======
+
+    const responseData = await response.json()
+    console.log(responseData)
+  } catch (error) {
+    console.error(error.message)
+>>>>>>> a097c31 (added homework 31)
   }
 }
 
@@ -140,10 +151,15 @@ async function postData(segment, data) {
 
     const responseData = await response.json()
     console.log(responseData)
+<<<<<<< HEAD
     return responseData
   } catch (error) {
     console.error(error.message)
     return error.message
+=======
+  } catch (error) {
+    console.error(error.message)
+>>>>>>> a097c31 (added homework 31)
   }
 }
 
@@ -189,10 +205,15 @@ async function putData(id, data) {
 
     const responseData = await response.json()
     console.log(responseData)
+<<<<<<< HEAD
     return responseData
   } catch (error) {
     console.error(error.message)
     return error.message
+=======
+  } catch (error) {
+    console.error(error.message)
+>>>>>>> a097c31 (added homework 31)
   }
 }
 
@@ -238,10 +259,15 @@ async function patchData(id, data) {
 
     const responseData = await response.json()
     console.log(responseData)
+<<<<<<< HEAD
     return responseData
   } catch (error) {
     console.error(error.message)
     return error.message
+=======
+  } catch (error) {
+    console.error(error.message)
+>>>>>>> a097c31 (added homework 31)
   }
 }
 
@@ -285,10 +311,15 @@ async function deleteData(id) {
       console.log(`Failed to delete post with id ${id}. Status: ${response.status}`)
     }
     console.log(`Post with id ${id} has been successfully deleted.`)
+<<<<<<< HEAD
     return `Post with id ${id} has been successfully deleted.`
   } catch (error) {
     console.error(`Error during deletion: ${error.message}`)
     return `Error during deletion: ${error.message}`
+=======
+  } catch (error) {
+    console.error(`Error during deletion: ${error.message}`)
+>>>>>>> a097c31 (added homework 31)
   }
 }
 
