@@ -112,7 +112,7 @@ module.exports = {
   context: path.resolve(__dirname,'src'),
   mode: 'development',
   entry: {
-    main: './index.jsx',
+    main: './src/smelyk/index.html',
   },
   target: 'web',
   output: {
